@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Checkout</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<img src="images/logo.png" style="width:130px; display:block; margin:auto;">
+
+<div class="checkout-box fade-in">
+    <h2>🧾 Struk Pesanan</h2>
+
+    <div id="cartList"></div>
+
+    <h3>Total: <span id="totalHarga"></span></h3>
+
+    <script>
+    function saveOrderToAdmin() {
+        let cart = JSON.parse(localStorage.getItem("cart"));
+        let total = localStorage.getItem("totalHarga");
+
+        let items = cart.map(i => `${i.name} x${i.qty}`).join(", ");
+
+        let newOrder = {
+            nama: localStorage.getItem("nama"),
+            total: Number(total),
+            items: items
+        };
+
+        let orders = JSON.parse(localStorage.getItem("orders")) || [];
+        orders.push(newOrder);
+
+        localStorage.setItem("orders", JSON.stringify(orders));
+    }
+    </script>
+
+    <a href="payment.html" onclick="saveOrderToAdmin()" class="btn">Lanjut Pembayaran</a>
+</div>
+
+<script src="cart.js"></script>
+<script> loadCart(); </script>
+
+</body>
+</html>
+

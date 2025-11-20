@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Checkout</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body background="images/background-pink-shop.png">
+
+<h1>Checkout – Aly's Gelato Garden</h1>
+
+<div class="checkout-box">
+    <h2>Struk Pemesanan</h2>
+
+    <p>Nama: <span id="namaOut"></span></p>
+    <p>No WhatsApp: <span id="waOut"></span></p>
+    <p>Alamat: <span id="alamatOut"></span></p>
+
+    <h3>Pembayaran Via:</h3>
+    <ul>
+        <li>DANA</li>
+        <li>QRIS</li>
+        <li>ShopeePay</li>
+        <li>GoPay</li>
+        <li>OVO</li>
+        <li>M-Banking</li>
+    </ul>
+
+    <a class="btn" href="https://wa.me/6285882886204" target="_blank">
+        Lanjut Bayar via WhatsApp
+    </a>
+</div>
+
+<script>
+document.getElementById("namaOut").innerText = localStorage.getItem("nama");
+document.getElementById("waOut").innerText = localStorage.getItem("wa");
+document.getElementById("alamatOut").innerText = localStorage.getItem("alamat");
+</script>
+
+</body>
+</html>

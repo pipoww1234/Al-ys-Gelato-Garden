@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Pembayaran</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<img src="images/logo.png" style="width:130px; display:block; margin:auto;">
+
+<div class="checkout-box fade-in">
+
+    <h2>Pilih Metode Pembayaran</h2>
+
+    <select id="metode" class="input-select">
+        <option value="QRIS">QRIS</option>
+        <option value="DANA">DANA</option>
+        <option value="SPay">ShopeePay</option>
+        <option value="GoPay">GoPay</option>
+    </select>
+
+    <h3>Total: <span id="totalShow"></span></h3>
+
+    <h3>QR Pembayaran:</h3>
+    <img src="images/qris-placeholder.png" class="qris-img">
+
+    <a id="waBtn" class="btn" target="_blank">Konfirmasi via WhatsApp</a>
+
+</div>
+
+<script>
+let total = localStorage.getItem("totalHarga");
+document.getElementById("totalShow").innerText =
+ "Rp " + Number(total).toLocaleString();
+
+let nama = localStorage.getItem("nama");
+let wa  = localStorage.getItem("wa");
+
+document.getElementById("waBtn").href =
+ "https://wa.me/6285882886204?text=" + 
+ encodeURIComponent(
+   "Halo kak, saya sudah membayar.\n\nNama: " + nama +
+   "\nNo WA: " + wa + 
+   "\nTotal: Rp " + Number(total).toLocaleString()
+ );
+</script>
+
+</body>
+</html>

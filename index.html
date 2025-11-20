@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Aly's Gelato Garden</title>
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="images/logo.png" type="image/png">
+</head>
+
+<body>
+
+<div class="customer-box fade-in">
+    <img src="images/logo.png" style="width:150px; display:block; margin:auto;">
+    <h1>Selamat Datang di Aly's Gelato Garden 🍨</h1>
+
+    <input type="text" id="nama" placeholder="Nama Lengkap">
+    <input type="text" id="wa" placeholder="Nomor WhatsApp">
+    <input type="text" id="alamat" placeholder="Alamat">
+
+    <button class="btn" onclick="openPromo()">Lanjutkan</button>
+</div>
+
+<div id="promoPage" class="promo-page fade-in" style="display:none;">
+    <img src="images/promo-banner.png" style="width:100%; border-radius:15px;">
+    <h1>✨ Menu Baru & Promo Spesial ✨</h1>
+
+    <p>Pancake Fluffy Delight — Rp39.900 (Promo)</p>
+    <p>Gelato Peach Paradise — Rp44.900 (Promo)</p>
+    <p>Truffle Choco Bals — Rp59.900 (Promo)</p>
+
+    <a href="menu.html" class="btn">Masuk ke Menu</a>
+</div>
+
+<script>
+function openPromo(){
+    localStorage.setItem("nama", document.getElementById("nama").value);
+    localStorage.setItem("wa", document.getElementById("wa").value);
+    localStorage.setItem("alamat", document.getElementById("alamat").value);
+
+    document.querySelector(".customer-box").style.display="none";
+    document.getElementById("promoPage").style.display="block";
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+/AlysGelatoGarden
+│── index.html
+│── menu.html
+│── about.html
+│── contact.html
+│── style.css
+│
+└── /images
+      │── 1-chocolate-truffle.png
+      │── 2-matcha-serenity.png
+      │── 3-mango-sunset.png
+      │── 4-vanilla-bean-cloud.png
+      │── 5-strawberry-alys.png
+      │── 6-peach-paradise.png
+      │── 7-waffle-bites.png
+      │── 8-brownie-alamode.png
+      │── 9-churros.png
+      │── 10-croissant-gelato.png
+      │── 11-truffle-choco-balls.png
+      │── 12-pancake-fluffy.png
+      │── topping1-almond.png
+      │── topping2-chocochips.png
+      │── topping3-caramel.png
+      │── topping4-marshmallow.png
+      │── topping5-maple.png
+      │── topping6-lotus.png
+      │── promo-banner.png
+      │── background-pink-shop.png
